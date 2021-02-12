@@ -3,7 +3,7 @@
 
 using ::testing::Test;
 
-TEST(CoreProessingUnit, InitialFlags)
+TEST(CoreProcessingUnit, InitialFlags)
 {
 	CoreProcessingUnit testItem;
 
