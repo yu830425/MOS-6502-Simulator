@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CoreProcessingUnit.cpp" />
+    <ClCompile Include="CoreProcessingUnit_LoadAndStore.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
