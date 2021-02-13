@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CoreProcessingUnitTest_Initial.cpp" />
+    <ClCompile Include="CoreProcessingUnitTest_Load.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

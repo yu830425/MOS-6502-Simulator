@@ -13,7 +13,13 @@ public:
 	BYTE getRegisterX();
 	BYTE getRegisterY();
 
+	void LDA(BYTE value);
+	void LDX(BYTE value);
+
+	void LDY(BYTE value);
 private:
+	void setRegister(BYTE &cpuRegister, BYTE value);
+
 	bool m_negative;
 	bool m_overflow;
 	bool m_break;
