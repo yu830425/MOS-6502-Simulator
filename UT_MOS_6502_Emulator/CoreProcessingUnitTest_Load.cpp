@@ -3,7 +3,7 @@
 
 using ::testing::Test;
 
-TEST(CoreProcessingUnit, LDA_changeNegativeFlag)
+TEST(CoreProcessingUnit, LDA_LoadNegativeValue_SetNegativeFlag)
 {
 	CoreProcessingUnit testItem;
 
@@ -16,7 +16,7 @@ TEST(CoreProcessingUnit, LDA_changeNegativeFlag)
 	ASSERT_EQ(0x80, accumulator);
 }
 
-TEST(CoreProcessingUnit, LDA_changeZeroFlag)
+TEST(CoreProcessingUnit, LDA_LoadZero_SetZeroFlag)
 {
 	CoreProcessingUnit testItem;
 
@@ -29,7 +29,7 @@ TEST(CoreProcessingUnit, LDA_changeZeroFlag)
 	ASSERT_EQ(0x00, accumulator);
 }
 
-TEST(CoreProcessingUnit, LDX_changeNegativeFlag)
+TEST(CoreProcessingUnit, LDX_LoadNegative_SetNegativeFlag)
 {
 	CoreProcessingUnit testItem;
 
@@ -42,7 +42,7 @@ TEST(CoreProcessingUnit, LDX_changeNegativeFlag)
 	ASSERT_EQ(0x80, registerX);
 }
 
-TEST(CoreProcessingUnit, LDX_changeZeroFlag)
+TEST(CoreProcessingUnit, LDX_LoadZero_SetZeroFlag)
 {
 	CoreProcessingUnit testItem;
 
@@ -55,7 +55,7 @@ TEST(CoreProcessingUnit, LDX_changeZeroFlag)
 	ASSERT_EQ(0x00, registerX);
 }
 
-TEST(CoreProcessingUnit, LDY_changeNegativeFlag)
+TEST(CoreProcessingUnit, LDY_LoadNegative_SetNegativeFlag)
 {
 	CoreProcessingUnit testItem;
 
@@ -68,7 +68,7 @@ TEST(CoreProcessingUnit, LDY_changeNegativeFlag)
 	ASSERT_EQ(0x80, registerY);
 }
 
-TEST(CoreProcessingUnit, LDY_changeZeroFlag)
+TEST(CoreProcessingUnit, LDY_LoadZero_SetZeroFlag)
 {
 	CoreProcessingUnit testItem;
 
