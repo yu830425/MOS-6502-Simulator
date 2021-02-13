@@ -1,7 +1,7 @@
 #pragma once
-typedef unsigned char BYTE;
-typedef unsigned short WORD;
-typedef unsigned long DWORD;
+using BYTE = unsigned char;
+using WORD = unsigned short;
+using DWORD = unsigned long;
 
 class CoreProcessingUnit
 {
