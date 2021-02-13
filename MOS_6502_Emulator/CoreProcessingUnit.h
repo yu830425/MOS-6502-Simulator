@@ -15,8 +15,11 @@ public:
 
 	void LDA(BYTE value);
 	void LDX(BYTE value);
-
 	void LDY(BYTE value);
+
+	BYTE STA();
+	BYTE STX();
+	BYTE STY();
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 
