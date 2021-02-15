@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CoreProcessingUnit.cpp" />
+    <ClCompile Include="CoreProcessingUnit_Arithmetic.cpp" />
     <ClCompile Include="CoreProcessingUnit_ClearFlag.cpp" />
     <ClCompile Include="CoreProcessingUnit_Load.cpp" />
     <ClCompile Include="CoreProcessingUnit_SetFlags.cpp" />

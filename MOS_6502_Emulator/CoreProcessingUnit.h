@@ -28,6 +28,10 @@ public:
 	void SEI();
 	void CLI();
 	void CLV();
+
+	void ADC(BYTE value);
+	void SBC(BYTE value);
+
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 
@@ -38,6 +42,7 @@ private:
 	bool m_interrupt;
 	bool m_zero;
 	bool m_carry;
+
 	BYTE m_accumulator;
 	BYTE m_registerX;
 	BYTE m_registerY;
