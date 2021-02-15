@@ -24,8 +24,5 @@
     <ClCompile Include="CoreProcessingUnitTest_Load.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CoreProcessingUnitTest_Store.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

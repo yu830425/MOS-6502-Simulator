@@ -20,6 +20,14 @@ public:
 	BYTE STA();
 	BYTE STX();
 	BYTE STY();
+	
+	void SEC();
+	void CLC();
+	void SED();
+	void CLD();
+	void SEI();
+	void CLI();
+	void CLV();
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 
