@@ -23,10 +23,16 @@
     <ClCompile Include="CoreProcessingUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CoreProcessingUnit_LoadAndStore.cpp">
+    <ClCompile Include="CoreProcessingUnit_Store.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CoreProcessingUnit_SetAndClearFlags.cpp">
+    <ClCompile Include="CoreProcessingUnit_Load.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreProcessingUnit_ClearFlag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreProcessingUnit_SetFlags.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

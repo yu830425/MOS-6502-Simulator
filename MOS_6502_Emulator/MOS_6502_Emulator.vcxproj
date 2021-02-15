@@ -23,8 +23,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CoreProcessingUnit.cpp" />
-    <ClCompile Include="CoreProcessingUnit_LoadAndStore.cpp" />
-    <ClCompile Include="CoreProcessingUnit_SetAndClearFlags.cpp" />
+    <ClCompile Include="CoreProcessingUnit_ClearFlag.cpp" />
+    <ClCompile Include="CoreProcessingUnit_Load.cpp" />
+    <ClCompile Include="CoreProcessingUnit_SetFlags.cpp" />
+    <ClCompile Include="CoreProcessingUnit_Store.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
