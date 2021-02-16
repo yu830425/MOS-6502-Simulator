@@ -35,6 +35,11 @@ public:
 	BYTE INC(BYTE value);
 	void INX();
 	void INY();
+
+	BYTE DEC(BYTE value);
+	void DEX();
+	void DEY();
+
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 
