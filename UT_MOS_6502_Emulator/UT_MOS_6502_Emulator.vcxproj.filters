@@ -36,5 +36,8 @@
     <ClCompile Include="CoreProcessingUnitTest_Shift.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CoreProcessingUnitTest_Rotate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

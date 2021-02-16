@@ -43,6 +43,8 @@ public:
 	BYTE ASL(BYTE value);
 	BYTE LSR(BYTE value);
 
+	BYTE ROL(BYTE value);
+	BYTE ROR(BYTE value);
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 

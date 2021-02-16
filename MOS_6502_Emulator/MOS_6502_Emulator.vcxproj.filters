@@ -47,5 +47,8 @@
     <ClCompile Include="CoreProcessingUnit_Shift.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CoreProcessingUnit_Rotate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
