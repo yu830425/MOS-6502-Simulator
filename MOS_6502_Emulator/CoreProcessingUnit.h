@@ -32,6 +32,9 @@ public:
 	void ADC(BYTE value);
 	void SBC(BYTE value);
 
+	BYTE INC(BYTE value);
+	void INX();
+	void INY();
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 

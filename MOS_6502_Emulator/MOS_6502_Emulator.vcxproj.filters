@@ -38,5 +38,8 @@
     <ClCompile Include="CoreProcessingUnit_Arithmetic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CoreProcessingUnit_Increment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
