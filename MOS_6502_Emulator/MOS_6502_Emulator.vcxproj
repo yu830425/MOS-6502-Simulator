@@ -29,6 +29,7 @@
     <ClCompile Include="CoreProcessingUnit_Increment.cpp" />
     <ClCompile Include="CoreProcessingUnit_Load.cpp" />
     <ClCompile Include="CoreProcessingUnit_SetFlags.cpp" />
+    <ClCompile Include="CoreProcessingUnit_Shift.cpp" />
     <ClCompile Include="CoreProcessingUnit_Store.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

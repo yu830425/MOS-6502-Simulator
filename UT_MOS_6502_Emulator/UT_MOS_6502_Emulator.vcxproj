@@ -144,6 +144,7 @@
     <ClCompile Include="CoreProcessingUnitTest_Increment.cpp" />
     <ClCompile Include="CoreProcessingUnitTest_Initial.cpp" />
     <ClCompile Include="CoreProcessingUnitTest_Load.cpp" />
+    <ClCompile Include="CoreProcessingUnitTest_Shift.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

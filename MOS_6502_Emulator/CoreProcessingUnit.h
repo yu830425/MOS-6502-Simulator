@@ -40,6 +40,9 @@ public:
 	void DEX();
 	void DEY();
 
+	BYTE ASL(BYTE value);
+	BYTE LSR(BYTE value);
+
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 
