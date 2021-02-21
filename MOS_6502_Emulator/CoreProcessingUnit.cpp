@@ -11,9 +11,9 @@ CoreProcessingUnit::CoreProcessingUnit()
 	m_interrupt(false),
 	m_zero(false),
 	m_carry(false),
-	m_accumulator(false),
-	m_registerX(false),
-	m_registerY(false)
+	m_accumulator(0x00),
+	m_registerX(0x00),
+	m_registerY(0x00),
 {
 
 }
