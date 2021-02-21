@@ -24,7 +24,7 @@ TEST(CoreProcessingUnit, InitialFlags)
 	ASSERT_FALSE(carry);
 }
 
-TEST(CoreProessingUnit, InitialRegister)
+TEST(CoreProcessingUnit, InitialRegister)
 {
 	CoreProcessingUnit testItem;
 
