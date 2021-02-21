@@ -45,6 +45,11 @@ public:
 
 	BYTE ROL(BYTE value);
 	BYTE ROR(BYTE value);
+
+	void AND(BYTE value);
+	void ORA(BYTE value);
+	void EOR(BYTE value);
+
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 

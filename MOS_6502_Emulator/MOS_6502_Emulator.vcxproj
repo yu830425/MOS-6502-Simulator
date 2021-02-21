@@ -28,6 +28,7 @@
     <ClCompile Include="CoreProcessingUnit_Decrement.cpp" />
     <ClCompile Include="CoreProcessingUnit_Increment.cpp" />
     <ClCompile Include="CoreProcessingUnit_Load.cpp" />
+    <ClCompile Include="CoreProcessingUnit_Logic.cpp" />
     <ClCompile Include="CoreProcessingUnit_Rotate.cpp" />
     <ClCompile Include="CoreProcessingUnit_SetFlags.cpp" />
     <ClCompile Include="CoreProcessingUnit_Shift.cpp" />
