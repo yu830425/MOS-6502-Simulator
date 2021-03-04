@@ -18,6 +18,15 @@
     <ClInclude Include="CoreProcessingUnit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BasicType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CoreProcessingUnit.cpp">
@@ -51,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CoreProcessingUnit_Logic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,7 +1,10 @@
 #pragma once
-using BYTE = unsigned char;
-using WORD = unsigned short;
-using DWORD = unsigned long;
+#include "BasicType.h"
+#include <memory>
+
+using namespace std;
+
+class IStack;
 
 class CoreProcessingUnit
 {
@@ -12,6 +15,7 @@ public:
 	BYTE getAccumulator();
 	BYTE getRegisterX();
 	BYTE getRegisterY();
+	void setStackController(shared_ptr<IStack> spStackController);
 
 	void LDA(BYTE value);
 	void LDX(BYTE value);
@@ -49,7 +53,11 @@ public:
 	void AND(BYTE value);
 	void ORA(BYTE value);
 	void EOR(BYTE value);
+	void PHA();
 
+	void PLA();
+	void PHP();
+	void PLP();
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 
@@ -64,5 +72,9 @@ private:
 	BYTE m_accumulator;
 	BYTE m_registerX;
 	BYTE m_registerY;
+
+	shared_ptr<IStack> m_spStackController;	
+	BYTE composeStatus();
+	void setProcessStatus(BYTE processStatus);
 };
 

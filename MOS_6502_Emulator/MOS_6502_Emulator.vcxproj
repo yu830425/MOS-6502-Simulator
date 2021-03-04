@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BasicType.h" />
     <ClInclude Include="CoreProcessingUnit.h" />
+    <ClInclude Include="IStack.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CoreProcessingUnit.cpp" />
@@ -33,6 +36,7 @@
     <ClCompile Include="CoreProcessingUnit_SetFlags.cpp" />
     <ClCompile Include="CoreProcessingUnit_Shift.cpp" />
     <ClCompile Include="CoreProcessingUnit_Store.cpp" />
+    <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
