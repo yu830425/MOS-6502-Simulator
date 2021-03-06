@@ -35,7 +35,9 @@
     <ClCompile Include="ProcessingUnit_Rotate.cpp" />
     <ClCompile Include="ProcessingUnit_SetFlags.cpp" />
     <ClCompile Include="ProcessingUnit_Shift.cpp" />
+    <ClCompile Include="ProcessingUnit_Stack.cpp" />
     <ClCompile Include="ProcessingUnit_Store.cpp" />
+    <ClCompile Include="ProcessingUnit_Transfer.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
