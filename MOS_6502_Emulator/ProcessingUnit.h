@@ -64,10 +64,16 @@ public:
 	void TXY();
 	void TSX();
 	void TXS();
+
+	void CMP(BYTE value);
+	void CPX(BYTE value);
+	void CPY(BYTE value);
+	void BIT(BYTE value);
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 	BYTE composeStatus();
 	void setProcessStatus(BYTE processStatus);
+	void compare(BYTE cpuRegister, BYTE value);
 
 	bool m_negative;
 	bool m_overflow;

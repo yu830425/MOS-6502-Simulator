@@ -28,6 +28,7 @@
     <ClCompile Include="ProcessingUnit.cpp" />
     <ClCompile Include="ProcessingUnit_Arithmetic.cpp" />
     <ClCompile Include="ProcessingUnit_ClearFlag.cpp" />
+    <ClCompile Include="ProcessingUnit_Compare.cpp" />
     <ClCompile Include="ProcessingUnit_Decrement.cpp" />
     <ClCompile Include="ProcessingUnit_Increment.cpp" />
     <ClCompile Include="ProcessingUnit_Load.cpp" />
