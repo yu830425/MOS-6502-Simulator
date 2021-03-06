@@ -1,6 +1,6 @@
-#include "CoreProcessingUnit.h"
+#include "ProcessingUnit.h"
 
-BYTE CoreProcessingUnit::ASL(BYTE value)
+BYTE ProcessingUnit::ASL(BYTE value)
 {
 	BYTE result = value << 1;
 
@@ -11,7 +11,7 @@ BYTE CoreProcessingUnit::ASL(BYTE value)
 	return result;
 }
 
-BYTE CoreProcessingUnit::LSR(BYTE value)
+BYTE ProcessingUnit::LSR(BYTE value)
 {
 	BYTE result = value >> 1;
 

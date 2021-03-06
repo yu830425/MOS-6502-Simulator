@@ -1,11 +1,11 @@
 #include "gtest/gtest.h"
-#include "../MOS_6502_Emulator/CoreProcessingUnit.h"
+#include "../MOS_6502_Emulator/ProcessingUnit.h"
 
 using ::testing::Test;
 
-TEST(CoreProcessingUnit, LDA_LoadNegativeValue_SetNegativeFlag)
+TEST(ProcessingUnit, LDA_LoadNegativeValue_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	testItem.LDA(0x80);
 
@@ -16,9 +16,9 @@ TEST(CoreProcessingUnit, LDA_LoadNegativeValue_SetNegativeFlag)
 	ASSERT_EQ(0x80, accumulator);
 }
 
-TEST(CoreProcessingUnit, LDA_LoadZero_SetZeroFlag)
+TEST(ProcessingUnit, LDA_LoadZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	testItem.LDA(0x00);
 
@@ -29,9 +29,9 @@ TEST(CoreProcessingUnit, LDA_LoadZero_SetZeroFlag)
 	ASSERT_EQ(0x00, accumulator);
 }
 
-TEST(CoreProcessingUnit, LDX_LoadNegative_SetNegativeFlag)
+TEST(ProcessingUnit, LDX_LoadNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	testItem.LDX(0x80);
 
@@ -42,9 +42,9 @@ TEST(CoreProcessingUnit, LDX_LoadNegative_SetNegativeFlag)
 	ASSERT_EQ(0x80, registerX);
 }
 
-TEST(CoreProcessingUnit, LDX_LoadZero_SetZeroFlag)
+TEST(ProcessingUnit, LDX_LoadZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	testItem.LDX(0x00);
 
@@ -55,9 +55,9 @@ TEST(CoreProcessingUnit, LDX_LoadZero_SetZeroFlag)
 	ASSERT_EQ(0x00, registerX);
 }
 
-TEST(CoreProcessingUnit, LDY_LoadNegative_SetNegativeFlag)
+TEST(ProcessingUnit, LDY_LoadNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	testItem.LDY(0x80);
 
@@ -68,9 +68,9 @@ TEST(CoreProcessingUnit, LDY_LoadNegative_SetNegativeFlag)
 	ASSERT_EQ(0x80, registerY);
 }
 
-TEST(CoreProcessingUnit, LDY_LoadZero_SetZeroFlag)
+TEST(ProcessingUnit, LDY_LoadZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	testItem.LDY(0x00);
 

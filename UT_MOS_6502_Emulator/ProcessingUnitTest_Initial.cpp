@@ -1,11 +1,11 @@
 #include "gtest/gtest.h"
-#include "../MOS_6502_Emulator/CoreProcessingUnit.h"
+#include "../MOS_6502_Emulator/ProcessingUnit.h"
 
 using ::testing::Test;
 
-TEST(CoreProcessingUnit, InitialFlags)
+TEST(ProcessingUnit, InitialFlags)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto negative = testItem.getFlag('N');
 	auto overflow = testItem.getFlag('V');
@@ -24,9 +24,9 @@ TEST(CoreProcessingUnit, InitialFlags)
 	ASSERT_FALSE(carry);
 }
 
-TEST(CoreProcessingUnit, InitialRegister)
+TEST(ProcessingUnit, InitialRegister)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto accumulator = testItem.getAccumulator();
 	auto registerX = testItem.getRegisterX();

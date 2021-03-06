@@ -6,10 +6,10 @@ using namespace std;
 
 class IStack;
 
-class CoreProcessingUnit
+class ProcessingUnit
 {
 public:
-	CoreProcessingUnit();
+	ProcessingUnit();
 
 	bool getFlag(char flagSymbol);
 	BYTE getAccumulator();

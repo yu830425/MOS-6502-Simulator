@@ -1,20 +1,20 @@
 #include "gtest/gtest.h"
-#include "../MOS_6502_Emulator/CoreProcessingUnit.h"
+#include "../MOS_6502_Emulator/ProcessingUnit.h"
 
 using ::testing::Test;
 
-TEST(CoreProcessingUnit, ASL_0x40ShiftLeft1Bit_ReturnShouldBe0x80)
+TEST(ProcessingUnit, ASL_0x40ShiftLeft1Bit_ReturnShouldBe0x80)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.ASL(0x40);
 
 	ASSERT_EQ(0x80, result);
 }
 
-TEST(CoreProcessingUnit, ASL_Bit7Is1_SetCarryFlag)
+TEST(ProcessingUnit, ASL_Bit7Is1_SetCarryFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.ASL(0x80);
 	ASSERT_EQ(0x00, result);
@@ -23,9 +23,9 @@ TEST(CoreProcessingUnit, ASL_Bit7Is1_SetCarryFlag)
 	ASSERT_TRUE(carry);
 }
 
-TEST(CoreProcessingUnit, ASL_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, ASL_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.ASL(0x80);
 	ASSERT_EQ(0x00, result);
@@ -34,9 +34,9 @@ TEST(CoreProcessingUnit, ASL_ResultIsZero_SetZeroFlag)
 	ASSERT_TRUE(zero);
 }
 
-TEST(CoreProcessingUnit, ASL_ResultIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, ASL_ResultIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.ASL(0x40);
 	ASSERT_EQ(0x80, result);
@@ -45,18 +45,18 @@ TEST(CoreProcessingUnit, ASL_ResultIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, LSR_0x80ShiftRight1Bit_ReturnShouldBe0x40)
+TEST(ProcessingUnit, LSR_0x80ShiftRight1Bit_ReturnShouldBe0x40)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.LSR(0x80);
 
 	ASSERT_EQ(0x40, result);
 }
 
-TEST(CoreProcessingUnit, LSR_Bit0Is1_SetCarryFlag)
+TEST(ProcessingUnit, LSR_Bit0Is1_SetCarryFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.LSR(0x01);
 	ASSERT_EQ(0x00, result);
@@ -65,9 +65,9 @@ TEST(CoreProcessingUnit, LSR_Bit0Is1_SetCarryFlag)
 	ASSERT_TRUE(carry);
 }
 
-TEST(CoreProcessingUnit, LSR_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, LSR_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.LSR(0x01);
 	ASSERT_EQ(0x00, result);

@@ -1,10 +1,10 @@
-#include "CoreProcessingUnit.h"
+#include "ProcessingUnit.h"
 #include <stdexcept>
 #include "Stack.h"
 
 using namespace std;
 
-CoreProcessingUnit::CoreProcessingUnit()
+ProcessingUnit::ProcessingUnit()
 	:m_negative(false),
 	m_overflow(false),
 	m_break(false),
@@ -19,7 +19,7 @@ CoreProcessingUnit::CoreProcessingUnit()
 	//m_spStackController = make_shared<Stack>();
 }
 
-bool CoreProcessingUnit::getFlag(char flagSymbol)
+bool ProcessingUnit::getFlag(char flagSymbol)
 {
 	//NV(1)BDIZC
 	switch (flagSymbol)
@@ -43,51 +43,51 @@ bool CoreProcessingUnit::getFlag(char flagSymbol)
 	return false;
 }
 
-BYTE CoreProcessingUnit::getAccumulator()
+BYTE ProcessingUnit::getAccumulator()
 {
 	return m_accumulator;
 }
 
-BYTE CoreProcessingUnit::getRegisterX()
+BYTE ProcessingUnit::getRegisterX()
 {
 	return m_registerX;
 }
 
-BYTE CoreProcessingUnit::getRegisterY()
+BYTE ProcessingUnit::getRegisterY()
 {
 	return m_registerY;
 }
 
-void CoreProcessingUnit::setStackController(shared_ptr<IStack> spStackController)
+void ProcessingUnit::setStackController(shared_ptr<IStack> spStackController)
 {
 	m_spStackController = spStackController;
 }
 
-void CoreProcessingUnit::PHA()
+void ProcessingUnit::PHA()
 {
 	m_spStackController->push(m_accumulator);
 }
 
-void CoreProcessingUnit::PLA()
+void ProcessingUnit::PLA()
 {
 	m_accumulator = m_spStackController->pop();
 }
 
-void CoreProcessingUnit::PHP()
+void ProcessingUnit::PHP()
 {
 	auto processStatus = composeStatus();
 
 	m_spStackController->push(processStatus);
 }
 
-void CoreProcessingUnit::PLP()
+void ProcessingUnit::PLP()
 {
 	auto processStatus = m_spStackController->pop();
 
 	setProcessStatus(processStatus);
 }
 
-BYTE CoreProcessingUnit::composeStatus()
+BYTE ProcessingUnit::composeStatus()
 {
 	//NV(1)BDIZC
 	BYTE status = 0b00100000;
@@ -103,7 +103,7 @@ BYTE CoreProcessingUnit::composeStatus()
 	return status;
 }
 
-void CoreProcessingUnit::setProcessStatus(BYTE processStatus)
+void ProcessingUnit::setProcessStatus(BYTE processStatus)
 {
 	m_negative	= ((processStatus & 0b10000000) != 0);
 	m_overflow	= ((processStatus & 0b01000000) != 0);

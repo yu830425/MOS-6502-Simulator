@@ -141,15 +141,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CoreProcessingUnitTest_Arithmetic.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Decrement.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Increment.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Initial.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Load.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Logic.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Rotate.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Shift.cpp" />
-    <ClCompile Include="CoreProcessingUnitTest_Stack.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Arithmetic.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Decrement.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Increment.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Initial.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Load.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Logic.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Rotate.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Shift.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Stack.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

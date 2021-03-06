@@ -1,11 +1,11 @@
 #include "gtest/gtest.h"
-#include "../MOS_6502_Emulator/CoreProcessingUnit.h"
+#include "../MOS_6502_Emulator/ProcessingUnit.h"
 
 using ::testing::Test;
 
-TEST(CoreProcessingUnit, AND_0xFFAnd0x01_ResultShouldBe0x01)
+TEST(ProcessingUnit, AND_0xFFAnd0x01_ResultShouldBe0x01)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0xFF);
 
 	testItem.AND(0x01);
@@ -14,9 +14,9 @@ TEST(CoreProcessingUnit, AND_0xFFAnd0x01_ResultShouldBe0x01)
 	ASSERT_EQ(0x01, accumulator);
 }
 
-TEST(CoreProcessingUnit, AND_ResultIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, AND_ResultIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0xFF);
 
 	testItem.AND(0x80);
@@ -28,9 +28,9 @@ TEST(CoreProcessingUnit, AND_ResultIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, AND_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, AND_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0xFF);
 
 	testItem.AND(0x00);
@@ -42,9 +42,9 @@ TEST(CoreProcessingUnit, AND_ResultIsZero_SetZeroFlag)
 	ASSERT_TRUE(zero);
 }
 
-TEST(CoreProcessingUnit, ORA_0x0FOr0xF0_ResultShouldBe0xFF)
+TEST(ProcessingUnit, ORA_0x0FOr0xF0_ResultShouldBe0xFF)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x0F);
 
 	testItem.ORA(0xF0);
@@ -53,9 +53,9 @@ TEST(CoreProcessingUnit, ORA_0x0FOr0xF0_ResultShouldBe0xFF)
 	ASSERT_EQ(0xFF, accumulator);
 }
 
-TEST(CoreProcessingUnit, ORA_ResultIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, ORA_ResultIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x0F);
 
 	testItem.ORA(0xF0);
@@ -67,9 +67,9 @@ TEST(CoreProcessingUnit, ORA_ResultIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, ORA_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, ORA_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x00);
 
 	testItem.ORA(0x00);
@@ -81,9 +81,9 @@ TEST(CoreProcessingUnit, ORA_ResultIsZero_SetZeroFlag)
 	ASSERT_TRUE(zero);
 }
 
-TEST(CoreProcessingUnit, EOR_0x85EOR0xFA_ResultShouldBe0x7F)
+TEST(ProcessingUnit, EOR_0x85EOR0xFA_ResultShouldBe0x7F)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x85);
 
 	testItem.EOR(0xFA);
@@ -92,9 +92,9 @@ TEST(CoreProcessingUnit, EOR_0x85EOR0xFA_ResultShouldBe0x7F)
 	ASSERT_EQ(0x7F, accumulator);
 }
 
-TEST(CoreProcessingUnit, EOR_ResultIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, EOR_ResultIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x05);
 
 	testItem.EOR(0xFA);
@@ -106,9 +106,9 @@ TEST(CoreProcessingUnit, EOR_ResultIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, EOR_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, EOR_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0xFF);
 
 	testItem.EOR(0xFF);

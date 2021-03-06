@@ -1,9 +1,9 @@
 #include "gtest/gtest.h"
-#include "../MOS_6502_Emulator/CoreProcessingUnit.h"
+#include "../MOS_6502_Emulator/ProcessingUnit.h"
 
-TEST(CoreProcessingUnit, ADC_1Add1WithoutCarry_Equal2)
+TEST(ProcessingUnit, ADC_1Add1WithoutCarry_Equal2)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x01);
 
 	testItem.ADC(0x01);
@@ -12,9 +12,9 @@ TEST(CoreProcessingUnit, ADC_1Add1WithoutCarry_Equal2)
 	ASSERT_EQ(0x02, accumulator);
 }
 
-TEST(CoreProcessingUnit, ADC_255Add1_ShouldSetCarryFlag)
+TEST(ProcessingUnit, ADC_255Add1_ShouldSetCarryFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x01);	//1
 
 	testItem.ADC(0xFF);	//-1(255)
@@ -26,9 +26,9 @@ TEST(CoreProcessingUnit, ADC_255Add1_ShouldSetCarryFlag)
 	ASSERT_TRUE(carry);
 }
 
-TEST(CoreProcessingUnit, ADC_1Add1WithCarry_Eqaul3)
+TEST(ProcessingUnit, ADC_1Add1WithCarry_Eqaul3)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.SEC();
 	testItem.LDA(0x01);	//reset accumulator
 
@@ -38,9 +38,9 @@ TEST(CoreProcessingUnit, ADC_1Add1WithCarry_Eqaul3)
 	ASSERT_EQ(0x03, accumulator);
 }
 
-TEST(CoreProcessingUnit, ADC_ResultIsLessThanZero_SetNegativeFlag)
+TEST(ProcessingUnit, ADC_ResultIsLessThanZero_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0xFF);	//-1
 	testItem.LDX(0x00); //set negative flag to zero.
 
@@ -53,9 +53,9 @@ TEST(CoreProcessingUnit, ADC_ResultIsLessThanZero_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, ADC_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, ADC_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x01);	//1
 	testItem.ADC(0xFF);	//-1
 
@@ -66,9 +66,9 @@ TEST(CoreProcessingUnit, ADC_ResultIsZero_SetZeroFlag)
 	ASSERT_TRUE(zero);
 }
 
-TEST(CoreProcessingUnit, ADC_NegativeAddNegativeEqualPositive_SetOverflowFlag)
+TEST(ProcessingUnit, ADC_NegativeAddNegativeEqualPositive_SetOverflowFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x80);
 	testItem.ADC(0x80);
 
@@ -79,9 +79,9 @@ TEST(CoreProcessingUnit, ADC_NegativeAddNegativeEqualPositive_SetOverflowFlag)
 	ASSERT_TRUE(overflow);
 }
 
-TEST(CoreProcessingUnit, SBC_2Minus1WithoutCarry_Equal0)
+TEST(ProcessingUnit, SBC_2Minus1WithoutCarry_Equal0)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x02);
 
 	testItem.SBC(0x01);
@@ -90,9 +90,9 @@ TEST(CoreProcessingUnit, SBC_2Minus1WithoutCarry_Equal0)
 	ASSERT_EQ(0x00, accumulator);
 }
 
-TEST(CoreProcessingUnit, SBC_2Minus1WithCarry_Equal1)
+TEST(ProcessingUnit, SBC_2Minus1WithCarry_Equal1)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x02);
 	testItem.SEC();
 
@@ -102,9 +102,9 @@ TEST(CoreProcessingUnit, SBC_2Minus1WithCarry_Equal1)
 	ASSERT_EQ(0x01, accumulator);
 }
 
-TEST(CoreProcessingUnit, SBC_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, SBC_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x02);
 
 	testItem.SBC(0x01);
@@ -116,9 +116,9 @@ TEST(CoreProcessingUnit, SBC_ResultIsZero_SetZeroFlag)
 	ASSERT_TRUE(zero);
 }
 
-TEST(CoreProcessingUnit, SBC_ResultIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, SBC_ResultIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x02);
 
 	testItem.SBC(0x02);
@@ -130,9 +130,9 @@ TEST(CoreProcessingUnit, SBC_ResultIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, SBC_1Minus255_SetCarryFlag)
+TEST(ProcessingUnit, SBC_1Minus255_SetCarryFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x01);
 	testItem.SBC(0xFF);
 
@@ -143,9 +143,9 @@ TEST(CoreProcessingUnit, SBC_1Minus255_SetCarryFlag)
 	ASSERT_TRUE(carry);
 }
 
-TEST(CoreProcessingUnit, SBC_PositiveMinusNegativeEqualNegative_SetOverflowFlag)
+TEST(ProcessingUnit, SBC_PositiveMinusNegativeEqualNegative_SetOverflowFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDA(0x7F);	//127
 	testItem.SEC();
 

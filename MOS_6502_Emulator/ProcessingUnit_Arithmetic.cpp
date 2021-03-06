@@ -1,6 +1,6 @@
-#include "CoreProcessingUnit.h"
+#include "ProcessingUnit.h"
 
-void CoreProcessingUnit::ADC(BYTE value)
+void ProcessingUnit::ADC(BYTE value)
 {
 	BYTE carry = m_carry ? 1 : 0;
 	WORD result = m_accumulator + value + carry;
@@ -14,7 +14,7 @@ void CoreProcessingUnit::ADC(BYTE value)
 	m_accumulator = result & 0xFF;
 }
 
-void CoreProcessingUnit::SBC(BYTE value)
+void ProcessingUnit::SBC(BYTE value)
 {
 	BYTE borrow = m_carry ? 0 : 1;
 	WORD result = m_accumulator - value - borrow;

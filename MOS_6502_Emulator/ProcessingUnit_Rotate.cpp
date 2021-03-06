@@ -1,6 +1,6 @@
-#include "CoreProcessingUnit.h"
+#include "ProcessingUnit.h"
 
-BYTE CoreProcessingUnit::ROL(BYTE value)
+BYTE ProcessingUnit::ROL(BYTE value)
 {
 	BYTE result = value << 1;
 
@@ -14,7 +14,7 @@ BYTE CoreProcessingUnit::ROL(BYTE value)
 	return result;
 }
 
-BYTE CoreProcessingUnit::ROR(BYTE value)
+BYTE ProcessingUnit::ROR(BYTE value)
 {
 	BYTE result = value >> 1;
 

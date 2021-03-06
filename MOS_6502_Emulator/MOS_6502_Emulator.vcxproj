@@ -20,22 +20,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicType.h" />
-    <ClInclude Include="CoreProcessingUnit.h" />
+    <ClInclude Include="ProcessingUnit.h" />
     <ClInclude Include="IStack.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CoreProcessingUnit.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Arithmetic.cpp" />
-    <ClCompile Include="CoreProcessingUnit_ClearFlag.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Decrement.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Increment.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Load.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Logic.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Rotate.cpp" />
-    <ClCompile Include="CoreProcessingUnit_SetFlags.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Shift.cpp" />
-    <ClCompile Include="CoreProcessingUnit_Store.cpp" />
+    <ClCompile Include="ProcessingUnit.cpp" />
+    <ClCompile Include="ProcessingUnit_Arithmetic.cpp" />
+    <ClCompile Include="ProcessingUnit_ClearFlag.cpp" />
+    <ClCompile Include="ProcessingUnit_Decrement.cpp" />
+    <ClCompile Include="ProcessingUnit_Increment.cpp" />
+    <ClCompile Include="ProcessingUnit_Load.cpp" />
+    <ClCompile Include="ProcessingUnit_Logic.cpp" />
+    <ClCompile Include="ProcessingUnit_Rotate.cpp" />
+    <ClCompile Include="ProcessingUnit_SetFlags.cpp" />
+    <ClCompile Include="ProcessingUnit_Shift.cpp" />
+    <ClCompile Include="ProcessingUnit_Store.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

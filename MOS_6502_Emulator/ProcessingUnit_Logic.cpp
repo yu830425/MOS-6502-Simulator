@@ -1,20 +1,20 @@
-#include "CoreProcessingUnit.h"
+#include "ProcessingUnit.h"
 
-void CoreProcessingUnit::AND(BYTE value)
+void ProcessingUnit::AND(BYTE value)
 {
 	BYTE result = m_accumulator & value;
 
 	setRegister(m_accumulator, result);
 }
 
-void CoreProcessingUnit::ORA(BYTE value)
+void ProcessingUnit::ORA(BYTE value)
 {
 	BYTE result = m_accumulator | value;
 
 	setRegister(m_accumulator, result);
 }
 
-void CoreProcessingUnit::EOR(BYTE value)
+void ProcessingUnit::EOR(BYTE value)
 {
 	BYTE result = m_accumulator ^ value;
 

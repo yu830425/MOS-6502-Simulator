@@ -1,6 +1,6 @@
-#include "CoreProcessingUnit.h"
+#include "ProcessingUnit.h"
 
-BYTE CoreProcessingUnit::INC(BYTE value)
+BYTE ProcessingUnit::INC(BYTE value)
 {
 	BYTE result = value + 1;
 
@@ -10,12 +10,12 @@ BYTE CoreProcessingUnit::INC(BYTE value)
 	return result;
 }
 
-void CoreProcessingUnit::INX()
+void ProcessingUnit::INX()
 {
 	m_registerX = INC(m_registerX);
 }
 
-void CoreProcessingUnit::INY()
+void ProcessingUnit::INY()
 {
 	m_registerY = INC(m_registerY);
 }

@@ -1,20 +1,20 @@
 #include "gtest/gtest.h"
-#include "../MOS_6502_Emulator/CoreProcessingUnit.h"
+#include "../MOS_6502_Emulator/ProcessingUnit.h"
 
 using ::testing::Test;
 
-TEST(CoreProcessingUnit, INC_Input1_Return2)
+TEST(ProcessingUnit, INC_Input1_Return2)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.INC(0x01);
 
 	ASSERT_EQ(0x02, result);
 }
 
-TEST(CoreProcessingUnit, INC_ResultIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, INC_ResultIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.INC(0xFE);
 	ASSERT_EQ(0xFF, result);
@@ -23,9 +23,9 @@ TEST(CoreProcessingUnit, INC_ResultIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, INC_ResultIsZero_SetZeroFlag)
+TEST(ProcessingUnit, INC_ResultIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 
 	auto result = testItem.INC(0xFF);
 	ASSERT_EQ(0x00, result);
@@ -34,9 +34,9 @@ TEST(CoreProcessingUnit, INC_ResultIsZero_SetZeroFlag)
 	ASSERT_TRUE(zero);
 }
 
-TEST(CoreProcessingUnit, INX_RegisterXis2_RegisterXBecome3)
+TEST(ProcessingUnit, INX_RegisterXis2_RegisterXBecome3)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDX(0x02);
 
 	testItem.INX();
@@ -45,9 +45,9 @@ TEST(CoreProcessingUnit, INX_RegisterXis2_RegisterXBecome3)
 	ASSERT_EQ(0x03, registerX);
 }
 
-TEST(CoreProcessingUnit, INX_RegisterXIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, INX_RegisterXIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDX(0xFE);
 
 	testItem.INX();
@@ -59,9 +59,9 @@ TEST(CoreProcessingUnit, INX_RegisterXIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, INX_RegisterXIsZero_SetZeroFlag)
+TEST(ProcessingUnit, INX_RegisterXIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDX(0xFF);
 
 	testItem.INX();
@@ -73,9 +73,9 @@ TEST(CoreProcessingUnit, INX_RegisterXIsZero_SetZeroFlag)
 	ASSERT_TRUE(zero);
 }
 
-TEST(CoreProcessingUnit, INY_RegisterYis2_RegisterYBecome3)
+TEST(ProcessingUnit, INY_RegisterYis2_RegisterYBecome3)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDY(0x02);
 
 	testItem.INY();
@@ -84,9 +84,9 @@ TEST(CoreProcessingUnit, INY_RegisterYis2_RegisterYBecome3)
 	ASSERT_EQ(0x03, registerX);
 }
 
-TEST(CoreProcessingUnit, INY_RegisterYIsNegative_SetNegativeFlag)
+TEST(ProcessingUnit, INY_RegisterYIsNegative_SetNegativeFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDY(0xFE);
 
 	testItem.INY();
@@ -98,9 +98,9 @@ TEST(CoreProcessingUnit, INY_RegisterYIsNegative_SetNegativeFlag)
 	ASSERT_TRUE(negative);
 }
 
-TEST(CoreProcessingUnit, INY_RegisterYIsZero_SetZeroFlag)
+TEST(ProcessingUnit, INY_RegisterYIsZero_SetZeroFlag)
 {
-	CoreProcessingUnit testItem;
+	ProcessingUnit testItem;
 	testItem.LDY(0xFF);
 
 	testItem.INY();

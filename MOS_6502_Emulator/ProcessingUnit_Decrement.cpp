@@ -1,6 +1,6 @@
-#include "CoreProcessingUnit.h"
+#include "ProcessingUnit.h"
 
-BYTE CoreProcessingUnit::DEC(BYTE value)
+BYTE ProcessingUnit::DEC(BYTE value)
 {
 	BYTE result = value - 1;
 
@@ -10,12 +10,12 @@ BYTE CoreProcessingUnit::DEC(BYTE value)
 	return result;
 }
 
-void CoreProcessingUnit::DEX()
+void ProcessingUnit::DEX()
 {
 	m_registerX = DEC(m_registerX);
 }
 
-void CoreProcessingUnit::DEY()
+void ProcessingUnit::DEY()
 {
 	m_registerY = DEC(m_registerY);
 }
