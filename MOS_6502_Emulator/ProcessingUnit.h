@@ -66,6 +66,8 @@ public:
 	void TXS();
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
+	BYTE composeStatus();
+	void setProcessStatus(BYTE processStatus);
 
 	bool m_negative;
 	bool m_overflow;
@@ -80,7 +82,5 @@ private:
 	BYTE m_registerY;
 
 	shared_ptr<IStack> m_spStackController;	
-	BYTE composeStatus();
-	void setProcessStatus(BYTE processStatus);
 };
 
