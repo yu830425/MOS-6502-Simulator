@@ -9,4 +9,5 @@ public:
 	MOCK_METHOD1(push, void(BYTE));
 	MOCK_METHOD0(pop, BYTE(void));
 	MOCK_METHOD0(getStackPointer, BYTE(void));
+	MOCK_METHOD1(setStackPointer, void(BYTE));
 };

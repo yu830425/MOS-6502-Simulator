@@ -1,6 +1,5 @@
 #include "ProcessingUnit.h"
 #include <stdexcept>
-#include "Stack.h"
 
 using namespace std;
 
@@ -70,7 +69,7 @@ void ProcessingUnit::PHA()
 
 void ProcessingUnit::PLA()
 {
-	m_accumulator = m_spStackController->pop();
+	setRegister(m_accumulator, m_spStackController->pop());
 }
 
 void ProcessingUnit::PHP()

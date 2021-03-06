@@ -45,6 +45,9 @@
     <ClCompile Include="ProcessingUnitTest_Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Transfer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MockStack.h">

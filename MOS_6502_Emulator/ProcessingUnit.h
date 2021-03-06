@@ -1,10 +1,9 @@
 #pragma once
 #include "BasicType.h"
 #include <memory>
+#include "IStack.h"
 
 using namespace std;
-
-class IStack;
 
 class ProcessingUnit
 {
@@ -58,6 +57,13 @@ public:
 	void PLA();
 	void PHP();
 	void PLP();
+
+	void TAX();
+	void TAY();
+	void TXA();
+	void TXY();
+	void TSX();
+	void TXS();
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 

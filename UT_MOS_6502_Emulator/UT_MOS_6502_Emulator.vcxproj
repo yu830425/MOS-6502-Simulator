@@ -151,6 +151,7 @@
     <ClCompile Include="ProcessingUnitTest_Shift.cpp" />
     <ClCompile Include="ProcessingUnitTest_Stack.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Transfer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MOS_6502_Emulator\MOS_6502_Emulator.vcxproj">

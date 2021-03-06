@@ -14,3 +14,8 @@ BYTE Stack::getStackPointer()
 {
 	return 0;
 }
+
+void Stack::setStackPointer(BYTE value)
+{
+
+}
