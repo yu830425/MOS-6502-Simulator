@@ -13,7 +13,8 @@ ProcessingUnit::ProcessingUnit()
 	m_carry(false),
 	m_accumulator(0x00),
 	m_registerX(0x00),
-	m_registerY(0x00)
+	m_registerY(0x00),
+	m_programCounter(0x0000)
 {
 	//m_spStackController = make_shared<Stack>();
 }
@@ -55,6 +56,11 @@ BYTE ProcessingUnit::getRegisterX()
 BYTE ProcessingUnit::getRegisterY()
 {
 	return m_registerY;
+}
+
+BYTE ProcessingUnit::getProgramCounter()
+{
+	return m_programCounter;
 }
 
 void ProcessingUnit::setStackController(shared_ptr<IStack> spStackController)

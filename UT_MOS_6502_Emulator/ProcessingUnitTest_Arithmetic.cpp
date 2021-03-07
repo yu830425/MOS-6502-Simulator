@@ -79,6 +79,16 @@ TEST(ProcessingUnit, ADC_NegativeAddNegativeEqualPositive_SetOverflowFlag)
 	ASSERT_TRUE(overflow);
 }
 
+TEST(ProcessingUnit, ADC_ExecuteCommand_IncreacePC)
+{
+	ProcessingUnit testItem;
+
+	testItem.ADC(0x80);
+
+	auto programCounter = testItem.getProgramCounter();
+	ASSERT_EQ(0x01, programCounter);
+}
+
 TEST(ProcessingUnit, SBC_2Minus1WithoutCarry_Equal0)
 {
 	ProcessingUnit testItem;

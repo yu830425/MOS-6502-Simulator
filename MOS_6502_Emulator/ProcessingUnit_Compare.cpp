@@ -3,6 +3,7 @@
 void ProcessingUnit::CMP(BYTE value)
 {
 	compare(m_accumulator, value);
+	m_programCounter++;
 }
 
 void ProcessingUnit::compare(BYTE cpuRegister, BYTE value)
@@ -15,11 +16,13 @@ void ProcessingUnit::compare(BYTE cpuRegister, BYTE value)
 void ProcessingUnit::CPX(BYTE value)
 {
 	compare(m_registerX, value);
+	m_programCounter++;
 }
 
 void ProcessingUnit::CPY(BYTE value)
 {
 	compare(m_registerY, value);
+	m_programCounter++;
 }
 
 void ProcessingUnit::BIT(BYTE value)
@@ -29,5 +32,6 @@ void ProcessingUnit::BIT(BYTE value)
 	m_zero = result == 0;
 	m_negative = (value & 0x80) != 0;
 	m_overflow = (value & 0x40) != 0;
+	m_programCounter++;
 }
 

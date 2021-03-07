@@ -31,8 +31,10 @@ TEST(ProcessingUnit, InitialRegister)
 	auto accumulator = testItem.getAccumulator();
 	auto registerX = testItem.getRegisterX();
 	auto registerY = testItem.getRegisterY();
+	auto programCounter = testItem.getProgramCounter();
 
 	ASSERT_EQ(0, accumulator);
 	ASSERT_EQ(0, registerX);
 	ASSERT_EQ(0, registerY);
+	ASSERT_EQ(0, programCounter);
 }

@@ -11,14 +11,17 @@ void ProcessingUnit::setRegister(BYTE& cpuRegister, BYTE value)
 void ProcessingUnit::LDA(BYTE value)
 {
 	setRegister(m_accumulator, value);
+	m_programCounter++;
 }
 
 void ProcessingUnit::LDX(BYTE value)
 {
 	setRegister(m_registerX, value);
+	m_programCounter++;
 }
 
 void ProcessingUnit::LDY(BYTE value)
 {
 	setRegister(m_registerY, value);
+	m_programCounter++;
 }

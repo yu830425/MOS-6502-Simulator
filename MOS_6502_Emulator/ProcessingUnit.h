@@ -14,6 +14,7 @@ public:
 	BYTE getAccumulator();
 	BYTE getRegisterX();
 	BYTE getRegisterY();
+	BYTE getProgramCounter();
 	void setStackController(shared_ptr<IStack> spStackController);
 
 	void LDA(BYTE value);
@@ -86,6 +87,7 @@ private:
 	BYTE m_accumulator;
 	BYTE m_registerX;
 	BYTE m_registerY;
+	WORD m_programCounter;
 
 	shared_ptr<IStack> m_spStackController;	
 };
