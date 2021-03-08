@@ -70,11 +70,21 @@ public:
 	void CPX(BYTE value);
 	void CPY(BYTE value);
 	void BIT(BYTE value);
+
+	void BCC(BYTE value);
+	void BCS(BYTE value);
+	void BNE(BYTE value);
+	void BEQ(BYTE value);
+	void BPL(BYTE value);
+	void BMI(BYTE value);
+	void BVC(BYTE value);
+	void BVS(BYTE value);
 private:
 	void setRegister(BYTE &cpuRegister, BYTE value);
 	BYTE composeStatus();
 	void setProcessStatus(BYTE processStatus);
 	void compare(BYTE cpuRegister, BYTE value);
+	void branch(bool pivot, BYTE value);
 
 	bool m_negative;
 	bool m_overflow;

@@ -27,6 +27,7 @@
   <ItemGroup>
     <ClCompile Include="ProcessingUnit.cpp" />
     <ClCompile Include="ProcessingUnit_Arithmetic.cpp" />
+    <ClCompile Include="ProcessingUnit_Branch.cpp" />
     <ClCompile Include="ProcessingUnit_ClearFlag.cpp" />
     <ClCompile Include="ProcessingUnit_Compare.cpp" />
     <ClCompile Include="ProcessingUnit_Decrement.cpp" />
