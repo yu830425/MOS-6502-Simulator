@@ -1,16 +1,16 @@
 #include "ProcessingUnit.h"
 
-void ProcessingUnit::CMP(BYTE value)
-{
-	compare(m_accumulator, value);
-	m_programCounter++;
-}
-
 void ProcessingUnit::compare(BYTE cpuRegister, BYTE value)
 {
 	m_negative = cpuRegister < value;
 	m_zero = cpuRegister == value;
 	m_carry = cpuRegister >= value;
+}
+
+void ProcessingUnit::CMP(BYTE value)
+{
+	compare(m_accumulator, value);
+	m_programCounter++;
 }
 
 void ProcessingUnit::CPX(BYTE value)
