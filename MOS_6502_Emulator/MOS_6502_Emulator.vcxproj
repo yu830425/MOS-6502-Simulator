@@ -32,6 +32,7 @@
     <ClCompile Include="ProcessingUnit_Compare.cpp" />
     <ClCompile Include="ProcessingUnit_Decrement.cpp" />
     <ClCompile Include="ProcessingUnit_Increment.cpp" />
+    <ClCompile Include="ProcessingUnit_Jump.cpp" />
     <ClCompile Include="ProcessingUnit_Load.cpp" />
     <ClCompile Include="ProcessingUnit_Logic.cpp" />
     <ClCompile Include="ProcessingUnit_Rotate.cpp" />

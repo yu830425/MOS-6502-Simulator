@@ -147,6 +147,7 @@
     <ClCompile Include="ProcessingUnitTest_Decrement.cpp" />
     <ClCompile Include="ProcessingUnitTest_Increment.cpp" />
     <ClCompile Include="ProcessingUnitTest_Initial.cpp" />
+    <ClCompile Include="ProcessingUnitTest_Jump.cpp" />
     <ClCompile Include="ProcessingUnitTest_Load.cpp" />
     <ClCompile Include="ProcessingUnitTest_Logic.cpp" />
     <ClCompile Include="ProcessingUnitTest_Rotate.cpp" />

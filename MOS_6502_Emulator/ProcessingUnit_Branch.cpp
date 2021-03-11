@@ -4,7 +4,12 @@ void ProcessingUnit::branch(bool criteria, BYTE value)
 {
 	if (criteria)
 	{
-		m_programCounter += static_cast<short>(value);
+		BYTE lowerByte = m_programCounter & 0xFF;
+
+		lowerByte += value;
+
+		m_programCounter &= 0xFF00;
+		m_programCounter |= lowerByte;
 	}
 	else
 	{

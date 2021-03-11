@@ -77,5 +77,8 @@
     <ClCompile Include="ProcessingUnit_Branch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ProcessingUnit_Jump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

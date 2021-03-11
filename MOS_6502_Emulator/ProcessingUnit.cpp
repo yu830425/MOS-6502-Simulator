@@ -58,7 +58,7 @@ BYTE ProcessingUnit::getRegisterY()
 	return m_registerY;
 }
 
-BYTE ProcessingUnit::getProgramCounter()
+WORD ProcessingUnit::getProgramCounter()
 {
 	return m_programCounter;
 }
@@ -67,4 +67,5 @@ void ProcessingUnit::setStackController(shared_ptr<IStack> spStackController)
 {
 	m_spStackController = spStackController;
 }
+
 
