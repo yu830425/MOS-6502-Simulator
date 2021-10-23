@@ -43,7 +43,7 @@ TEST(ProcessingUnit, TYA_RegisterYIs0x87_AccumulatorShouldBe0x87)
 	ProcessingUnit testItem;
 	testItem.LDY(0x87);
 
-	testItem.TXY();
+	testItem.TYA();
 
 	auto accumulator = testItem.getAccumulator();
 	ASSERT_EQ(0x87, accumulator);

@@ -18,7 +18,7 @@ void ProcessingUnit::TXA()
 	m_programCounter++;
 }
 
-void ProcessingUnit::TXY()
+void ProcessingUnit::TYA()
 {
 	setRegister(m_accumulator, m_registerY);
 	m_programCounter++;

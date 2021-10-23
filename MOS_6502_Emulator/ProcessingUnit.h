@@ -62,7 +62,7 @@ public:
 	void TAX();
 	void TAY();
 	void TXA();
-	void TXY();
+	void TYA();
 	void TSX();
 	void TXS();
 
