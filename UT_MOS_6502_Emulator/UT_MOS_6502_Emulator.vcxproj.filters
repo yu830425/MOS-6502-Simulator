@@ -60,6 +60,9 @@
     <ClCompile Include="ProcessingUnitTest_Transfer.cpp">
       <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
+    <ClCompile Include="BinaryLoaderTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MockStack.h">

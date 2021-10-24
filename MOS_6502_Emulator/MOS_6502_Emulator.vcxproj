@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicType.h" />
+    <ClInclude Include="BinaryLoader.h" />
     <ClInclude Include="ProcessingUnit.h" />
     <ClInclude Include="IStack.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryLoader.cpp" />
     <ClCompile Include="ProcessingUnit.cpp" />
     <ClCompile Include="ProcessingUnit_Arithmetic.cpp" />
     <ClCompile Include="ProcessingUnit_Branch.cpp" />
