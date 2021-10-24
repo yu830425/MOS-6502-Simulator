@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\ProcessingUnit">
+      <UniqueIdentifier>{2724439c-6f47-4615-9642-6fdd9f8b2f38}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicType.h">
@@ -33,52 +36,52 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ProcessingUnit.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
     <ClCompile Include="ProcessingUnit_Arithmetic.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_ClearFlag.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Decrement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Increment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Load.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Logic.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Rotate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_SetFlags.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Shift.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Store.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Transfer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Stack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnit_Compare.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
     <ClCompile Include="ProcessingUnit_Branch.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_ClearFlag.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Compare.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Decrement.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Increment.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
     <ClCompile Include="ProcessingUnit_Jump.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Load.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Logic.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Rotate.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_SetFlags.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Shift.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Stack.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Store.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnit_Transfer.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
