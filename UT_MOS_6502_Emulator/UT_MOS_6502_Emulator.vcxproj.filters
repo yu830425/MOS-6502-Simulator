@@ -13,49 +13,52 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\ProcessingUnit">
+      <UniqueIdentifier>{8beee7dd-a713-4091-975d-22d4532fb9ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ProcessingUnitTest_Arithmetic.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Decrement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Increment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Initial.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Load.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Logic.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Rotate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Shift.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Stack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Transfer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingUnitTest_Compare.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
     <ClCompile Include="ProcessingUnitTest_Branch.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Compare.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Decrement.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Increment.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Initial.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
     <ClCompile Include="ProcessingUnitTest_Jump.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Load.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Logic.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Rotate.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Shift.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Stack.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingUnitTest_Transfer.cpp">
+      <Filter>Source Files\ProcessingUnit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
