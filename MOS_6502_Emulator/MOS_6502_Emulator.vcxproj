@@ -22,7 +22,6 @@
     <ClInclude Include="BasicType.h" />
     <ClInclude Include="BinaryLoader.h" />
     <ClInclude Include="ProcessingUnit.h" />
-    <ClInclude Include="IStack.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>

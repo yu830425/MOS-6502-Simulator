@@ -1,13 +1,12 @@
 #pragma once
 
 #include "BasicType.h"
-#include "IStack.h"
 
-class Stack : public IStack
+class Stack
 {
 public:
-	void push(BYTE value) override;
-	BYTE pop() override;
-	BYTE getStackPointer() override;
-	void setStackPointer(BYTE value) override;
+	virtual void push(BYTE value);
+	virtual BYTE pop();
+	virtual BYTE getStackPointer();
+	virtual	void setStackPointer(BYTE value);
 };

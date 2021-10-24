@@ -63,7 +63,7 @@ WORD ProcessingUnit::getProgramCounter()
 	return m_programCounter;
 }
 
-void ProcessingUnit::setStackController(shared_ptr<IStack> spStackController)
+void ProcessingUnit::setStackController(shared_ptr<Stack> spStackController)
 {
 	m_spStackController = spStackController;
 }

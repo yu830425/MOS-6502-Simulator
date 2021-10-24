@@ -1,9 +1,9 @@
 #pragma once
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
-#include "../MOS_6502_Emulator/IStack.h"
+#include "../MOS_6502_Emulator/Stack.h"
 
-class MockStack : public IStack
+class MockStack : public Stack
 {
 public:
 	MOCK_METHOD1(push, void(BYTE));

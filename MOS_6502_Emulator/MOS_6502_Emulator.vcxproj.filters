@@ -21,9 +21,6 @@
     <ClInclude Include="BasicType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>

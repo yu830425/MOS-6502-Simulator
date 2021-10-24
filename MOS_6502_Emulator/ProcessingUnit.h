@@ -1,7 +1,7 @@
 #pragma once
 #include "BasicType.h"
+#include "Stack.h"
 #include <memory>
-#include "IStack.h"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ public:
 	BYTE getRegisterX();
 	BYTE getRegisterY();
 	WORD getProgramCounter();
-	void setStackController(shared_ptr<IStack> spStackController);
+	void setStackController(shared_ptr<Stack> spStackController);
 
 	void LDA(BYTE value);
 	void LDX(BYTE value);
@@ -103,6 +103,6 @@ private:
 	BYTE m_registerY;
 	WORD m_programCounter;
 
-	shared_ptr<IStack> m_spStackController;
+	shared_ptr<Stack> m_spStackController;
 };
 
