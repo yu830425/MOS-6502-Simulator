@@ -142,6 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BinaryLoaderTest.cpp" />
+    <ClCompile Include="BusTest.cpp" />
     <ClCompile Include="ProcessingUnitTest_Arithmetic.cpp" />
     <ClCompile Include="ProcessingUnitTest_Branch.cpp" />
     <ClCompile Include="ProcessingUnitTest_Compare.cpp" />
@@ -163,6 +164,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MockDevice.h" />
     <ClInclude Include="MockStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
