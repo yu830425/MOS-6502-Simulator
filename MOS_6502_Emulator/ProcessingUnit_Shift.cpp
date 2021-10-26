@@ -7,7 +7,6 @@ BYTE ProcessingUnit::ASL(BYTE value)
 	m_negative = (result & 0x80) != 0;
 	m_zero = result == 0;
 	m_carry = (value & 0x80) != 0;
-	m_programCounter++;
 
 	return result;
 }
@@ -19,7 +18,6 @@ BYTE ProcessingUnit::LSR(BYTE value)
 	m_zero = result == 0;
 	m_carry = (value & 0x01) != 0;
 	m_negative = false;		//bit 7 will always be zero
-	m_programCounter++;
 
 	return result;
 }

@@ -15,6 +15,7 @@ public:
 	BYTE getRegisterX();
 	BYTE getRegisterY();
 	WORD getProgramCounter();
+	void setProgramCounter(WORD programCounter);
 	void setStackController(shared_ptr<Stack> spStackController);
 
 	void LDA(BYTE value);
@@ -53,8 +54,8 @@ public:
 	void AND(BYTE value);
 	void ORA(BYTE value);
 	void EOR(BYTE value);
-	void PHA();
 
+	void PHA();
 	void PLA();
 	void PHP();
 	void PLP();

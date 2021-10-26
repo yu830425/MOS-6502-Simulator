@@ -22,6 +22,4 @@ void ProcessingUnit::RTS()
 
 	m_programCounter = upperByte << 8;
 	m_programCounter |= lowerByte;
-
-	m_programCounter++;
 }

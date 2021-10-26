@@ -12,8 +12,6 @@ void ProcessingUnit::ADC(BYTE value)
 	m_overflow = ((~m_accumulator & ~value & temp | m_accumulator & value & ~temp) & 0x80) != 0;
 
 	m_accumulator = result & 0xFF;
-
-	m_programCounter++;
 }
 
 void ProcessingUnit::SBC(BYTE value)
@@ -28,6 +26,4 @@ void ProcessingUnit::SBC(BYTE value)
 	m_overflow = ((temp & ~m_accumulator & value | ~temp & m_accumulator & ~value) & 0x80) != 0;
 
 	m_accumulator = result & 0xFF;
-
-	m_programCounter++;
 }

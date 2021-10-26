@@ -10,7 +10,6 @@ BYTE ProcessingUnit::ROL(BYTE value)
 
 	m_negative = (result & 0x80) != 0;
 	m_zero = result == 0;
-	m_programCounter++;
 
 	return result;
 }
@@ -25,7 +24,6 @@ BYTE ProcessingUnit::ROR(BYTE value)
 
 	m_negative = (result & 0x80) != 0;
 	m_zero = result == 0;
-	m_programCounter++;
 
 	return result;
 }

@@ -6,7 +6,6 @@ BYTE ProcessingUnit::DEC(BYTE value)
 
 	m_negative = (result & 0x80) != 0;
 	m_zero = result == 0;
-	m_programCounter++;
 
 	return result;
 }
@@ -14,11 +13,9 @@ BYTE ProcessingUnit::DEC(BYTE value)
 void ProcessingUnit::DEX()
 {
 	m_registerX = DEC(m_registerX);
-	m_programCounter++;
 }
 
 void ProcessingUnit::DEY()
 {
 	m_registerY = DEC(m_registerY);
-	m_programCounter++;
 }

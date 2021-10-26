@@ -13,7 +13,7 @@ void ProcessingUnit::branch(bool criteria, BYTE value)
 	}
 	else
 	{
-		m_programCounter++;
+		m_programCounter+=2;
 	}
 }
 

@@ -21,7 +21,7 @@ TEST(ProcessingUnit, JSR_GivePosition0x1234_StorePCAndJump)
 	ASSERT_EQ(0x1234, programCounter);
 }
 
-TEST(ProcessingUnit, RTS_JSRFrom0x4567_ShouldReturnTo0x4568)
+TEST(ProcessingUnit, RTS_JSRFrom0x4567_ShouldReturnTo0x4567)
 {
 	shared_ptr<MockStack> mockStack = make_shared<MockStack>();
 	EXPECT_CALL(*mockStack, push(0x45)).Times(1);
@@ -37,5 +37,5 @@ TEST(ProcessingUnit, RTS_JSRFrom0x4567_ShouldReturnTo0x4568)
 	testItem.RTS();
 
 	auto programCounter = testItem.getProgramCounter();
-	ASSERT_EQ(0x4568, programCounter);
+	ASSERT_EQ(0x4567, programCounter);
 }

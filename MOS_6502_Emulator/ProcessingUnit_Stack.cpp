@@ -30,13 +30,11 @@ void ProcessingUnit::setProcessStatus(BYTE processStatus)
 void ProcessingUnit::PHA()
 {
 	m_spStackController->push(m_accumulator);
-	m_programCounter++;
 }
 
 void ProcessingUnit::PLA()
 {
 	setRegister(m_accumulator, m_spStackController->pop());
-	m_programCounter++;
 }
 
 void ProcessingUnit::PHP()
@@ -44,7 +42,6 @@ void ProcessingUnit::PHP()
 	auto processStatus = composeStatus();
 
 	m_spStackController->push(processStatus);
-	m_programCounter++;
 }
 
 void ProcessingUnit::PLP()
@@ -52,6 +49,5 @@ void ProcessingUnit::PLP()
 	auto processStatus = m_spStackController->pop();
 
 	setProcessStatus(processStatus);
-	m_programCounter++;
 }
 
