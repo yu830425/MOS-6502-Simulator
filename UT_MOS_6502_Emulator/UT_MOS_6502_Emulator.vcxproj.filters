@@ -66,12 +66,18 @@
     <ClCompile Include="BusTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ProcessorTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MockStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MockDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MockProcessingUnit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

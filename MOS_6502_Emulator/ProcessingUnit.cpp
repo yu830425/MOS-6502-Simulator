@@ -73,4 +73,8 @@ void ProcessingUnit::setStackController(shared_ptr<Stack> spStackController)
 	m_spStackController = spStackController;
 }
 
+void ProcessingUnit::setAccumulator(BYTE accumulator)
+{
+	m_accumulator = accumulator;
+}
 

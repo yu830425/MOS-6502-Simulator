@@ -15,7 +15,7 @@ public:
 	BYTE getRegisterX();
 	BYTE getRegisterY();
 	WORD getProgramCounter();
-	void setProgramCounter(WORD programCounter);
+	virtual void setProgramCounter(WORD programCounter);
 	void setStackController(shared_ptr<Stack> spStackController);
 
 	void LDA(BYTE value);
@@ -25,7 +25,7 @@ public:
 	BYTE STA();
 	BYTE STX();
 	BYTE STY();
-	
+
 	void SEC();
 	void CLC();
 	void SED();
@@ -84,8 +84,9 @@ public:
 	void JMP(WORD address);
 	void JSR(WORD address);
 	void RTS();
+	void setAccumulator(BYTE accumulator);
 private:
-	void setRegister(BYTE &cpuRegister, BYTE value);
+	void setRegister(BYTE& cpuRegister, BYTE value);
 	BYTE composeStatus();
 	void setProcessStatus(BYTE processStatus);
 	void compare(BYTE cpuRegister, BYTE value);

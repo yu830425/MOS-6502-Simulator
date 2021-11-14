@@ -36,6 +36,12 @@
     <ClInclude Include="Device.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Processor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stack.cpp">
@@ -93,6 +99,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Bus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Processor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
