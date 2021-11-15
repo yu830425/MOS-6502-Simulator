@@ -23,6 +23,7 @@
     <ClInclude Include="BinaryLoader.h" />
     <ClInclude Include="Bus.h" />
     <ClInclude Include="CommandTable.h" />
+    <ClInclude Include="Console.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="ProcessingUnit.h" />
@@ -33,6 +34,7 @@
     <ClCompile Include="BinaryLoader.cpp" />
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="CommandTable.cpp" />
+    <ClCompile Include="Console.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="ProcessingUnit.cpp" />
     <ClCompile Include="ProcessingUnit_Arithmetic.cpp" />
