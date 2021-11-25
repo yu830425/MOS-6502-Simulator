@@ -29,12 +29,12 @@ BinaryLoader::BinaryLoader(std::string binaryPath)
 	m_spAddress = spAddress;
 	
 	m_loadAddress = 0;
-	m_loadAddress |= loadAddress[1];
-	m_loadAddress |= ((int)loadAddress[0]) << 8;
+	m_loadAddress |= loadAddress[0];
+	m_loadAddress |= ((int)loadAddress[1]) << 8;
 
 	m_resetAddress = 0;
-	m_resetAddress |= resetAddress[1];
-	m_resetAddress |= ((int)resetAddress[0]) << 8;
+	m_resetAddress |= resetAddress[0];
+	m_resetAddress |= ((int)resetAddress[1]) << 8;
 
 	char data = 0;
 

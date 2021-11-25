@@ -24,7 +24,7 @@ enum AddressMode
 
 struct Command
 {
-	string commnadName;
+	string commandName;
 	AddressMode mode;
 };
 

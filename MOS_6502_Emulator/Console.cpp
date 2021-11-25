@@ -8,10 +8,10 @@ void Console::write(WORD address, const std::vector<BYTE>& data)
 		std::cout << dataPerByte;
 	}
 
-	std::cout << std::endl;
+	std::cout.flush();
 }
 
 std::vector<BYTE> Console::read(WORD address, int size)
 {
-	return {};
+	return std::vector<BYTE>(size, 0);
 }

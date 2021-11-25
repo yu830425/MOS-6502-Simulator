@@ -11,10 +11,7 @@ void ProcessingUnit::branch(bool criteria, BYTE value)
 		m_programCounter &= 0xFF00;
 		m_programCounter |= lowerByte;
 	}
-	else
-	{
-		m_programCounter+=2;
-	}
+	m_programCounter += 2;
 }
 
 void ProcessingUnit::BCC(BYTE value)

@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MOS_6502_Emulator", "MOS_65
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UT_MOS_6502_Emulator", "UT_MOS_6502_Emulator\UT_MOS_6502_Emulator.vcxproj", "{3ECA0434-065E-4B8B-88F4-241764591139}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MOS_6502_Executable", "MOS_6502_Executable\MOS_6502_Executable.vcxproj", "{D2503879-0942-4F72-989D-5F7E3A5010BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{3ECA0434-065E-4B8B-88F4-241764591139}.Release|x64.Build.0 = Release|x64
 		{3ECA0434-065E-4B8B-88F4-241764591139}.Release|x86.ActiveCfg = Release|Win32
 		{3ECA0434-065E-4B8B-88F4-241764591139}.Release|x86.Build.0 = Release|Win32
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Debug|x64.ActiveCfg = Debug|x64
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Debug|x64.Build.0 = Debug|x64
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Debug|x86.ActiveCfg = Debug|Win32
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Debug|x86.Build.0 = Debug|Win32
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Release|x64.ActiveCfg = Release|x64
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Release|x64.Build.0 = Release|x64
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Release|x86.ActiveCfg = Release|Win32
+		{D2503879-0942-4F72-989D-5F7E3A5010BA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

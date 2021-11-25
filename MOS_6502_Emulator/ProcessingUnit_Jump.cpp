@@ -7,8 +7,11 @@ void ProcessingUnit::JMP(WORD address)
 
 void ProcessingUnit::JSR(WORD address)
 {
+	m_programCounter += 3;
+
 	BYTE upperByte = m_programCounter >> 8;
 	BYTE lowerByte = m_programCounter & 0xFF;
+
 	m_spStackController->push(m_programCounter >> 8);
 	m_spStackController->push(m_programCounter & 0xFF);
 

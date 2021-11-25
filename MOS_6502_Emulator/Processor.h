@@ -5,6 +5,7 @@
 #include "ProcessingUnit.h"
 #include "Bus.h"
 #include "CommandTable.h"
+#include "Stack.h"
 
 using namespace std;
 
@@ -15,13 +16,13 @@ public:
 
 	void setProcessingUnit(std::shared_ptr<ProcessingUnit> processingUnit);
 	void setBus(std::shared_ptr<Bus> bus);
-
 	void setProgramCounter(WORD address);
 
 	void run();
 private:
 	shared_ptr<ProcessingUnit> m_processingUnit;
 	shared_ptr<Bus> m_bus;
+	shared_ptr<Stack> m_stack;
 	unordered_map<char, Command> m_commandTable;
 	unordered_map<string, any> m_commandMap;
 	unordered_map<string, bool> m_writeBackMap;

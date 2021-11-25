@@ -3,3 +3,4 @@ MOS_6502_Emulator/Debug/*
 UT_MOS_6502_Emulator/Debug/*
 .vs/*
 UT_MOS_6502_Emulator/test.bin
+MOS_6502_Executable/Debug/*
