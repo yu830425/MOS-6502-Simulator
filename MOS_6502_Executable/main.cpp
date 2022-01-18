@@ -3,10 +3,21 @@
 #include "../MOS_6502_Emulator/Memory.h"
 #include "../MOS_6502_Emulator/Console.h"
 #include "../MOS_6502_Emulator/Processor.h"
+#include <iostream>
 
-int main()
+using namespace std;
+
+int main(int argc, char* argv[])
 {
-	BinaryLoader loader("practice");
+	cout << "the number of the arguments: " << argc << endl;
+
+	if (argc < 2)
+	{
+		cout << "too few arguments to run!!!" << endl;
+		return 0;
+	}
+
+	BinaryLoader loader(argv[1]);
 
 	auto spAddress = loader.getSpAddress();
 	auto loadAddress = loader.getLoadAddress();
