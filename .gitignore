@@ -8,3 +8,9 @@ MOS_6502_Executable/Release/*
 MOS_6502_Executable/x64/*
 MOS_6502_Emulator/x64/*
 MOS_6502_Emulator/Release/*
+Release/*
+UT_MOS_6502_Emulator/Release/*
+UT_MOS_6502_Emulator/x64/Debug/*
+UT_MOS_6502_Emulator/x64/Release/*
+x64/Debug/*
+x64/Release*
