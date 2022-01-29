@@ -46,10 +46,10 @@ TEST(BinaryLoaderTest, getAddress)
 	ASSERT_EQ(spAddress, 0x20);
 
 	auto loadAddress = loader.getLoadAddress();
-	ASSERT_EQ(loadAddress, 0x0002);
+	ASSERT_EQ(loadAddress, 0x0200);
 
 	auto resetAddress = loader.getResetAddress();
-	ASSERT_EQ(resetAddress, 0x0002);
+	ASSERT_EQ(resetAddress, 0x0200);
 }
 
 TEST(BinaryLoaderTest, getProgram)
