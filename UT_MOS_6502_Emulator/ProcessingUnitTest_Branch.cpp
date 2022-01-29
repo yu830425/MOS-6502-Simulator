@@ -10,22 +10,23 @@ TEST(ProcessingUnit, BCC_CarryIsFalse_JumpForward)
 
 	testItem.BCC(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2 (branch command length)
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BCC_CarryIsFalse_JumpBackward)
 {
 	ProcessingUnit testItem;
 	testItem.CLC();
-	testItem.CLC();
 
-	testItem.setProgramCounter(0x0002);
+	testItem.setProgramCounter(0x0006);
 
-	ASSERT_EQ(0x0002, testItem.getProgramCounter());
+	ASSERT_EQ(0x0006, testItem.getProgramCounter());
 
-	testItem.BCC(0xFF); //-1
+	testItem.BCC(0xFC); //-4
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 6 - 4 + 2 
+	ASSERT_EQ(0x004, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BCC_CarryIsTrue_IncreaseProgramCounter)
@@ -49,7 +50,8 @@ TEST(ProcessingUnit, BCS_CarryIsTrue_JumpForward)
 
 	testItem.BCS(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BCS_CarryIsTrue_JumpBackward)
@@ -64,7 +66,8 @@ TEST(ProcessingUnit, BCS_CarryIsTrue_JumpBackward)
 
 	testItem.BCS(0xFF); //-1
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 2 - 1 + 2
+	ASSERT_EQ(0x0003, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BCS_CarryIsFalse_IncreaseProgramCounter)
@@ -88,7 +91,8 @@ TEST(ProcessingUnit, BNE_ZeroIsFalse_JumpForward)
 
 	testItem.BNE(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BNE_ZeroIsFalse_JumpBackward)
@@ -103,7 +107,8 @@ TEST(ProcessingUnit, BNE_ZeroIsFalse_JumpBackward)
 
 	testItem.BNE(0xFF); //-1
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 2 - 1 + 2
+	ASSERT_EQ(0x0003, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BNE_ZeroIsTrue_IncreaseProgramCounter)
@@ -127,7 +132,8 @@ TEST(ProcessingUnit, BEQ_ZeroIsTrue_JumpForward)
 
 	testItem.BEQ(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BEQ_ZeroIsTrue_JumpBackward)
@@ -142,7 +148,8 @@ TEST(ProcessingUnit, BEQ_ZeroIsTrue_JumpBackward)
 
 	testItem.BEQ(0xFF); //-1
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 2 - 1 + 2
+	ASSERT_EQ(0x0003, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BEQ_ZeroIsFalse_IncreaseProgramCounter)
@@ -166,7 +173,8 @@ TEST(ProcessingUnit, BPL_NegativeIsFalse_JumpForward)
 
 	testItem.BPL(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BPL_NegativeIsFalse_JumpBackward)
@@ -181,7 +189,8 @@ TEST(ProcessingUnit, BPL_NegativeIsFalse_JumpBackward)
 
 	testItem.BPL(0xFF); //-1
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 2 - 1 + 2
+	ASSERT_EQ(0x0003, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BPL_NegativeIsTrue_IncreaseProgramCounter)
@@ -205,7 +214,8 @@ TEST(ProcessingUnit, BMI_NegativeIsTrue_JumpForward)
 
 	testItem.BMI(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BMI_NegativeIsTrue_JumpBackward)
@@ -220,7 +230,8 @@ TEST(ProcessingUnit, BMI_NegativeIsTrue_JumpBackward)
 
 	testItem.BMI(0xFF); //-1
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 2 - 1 + 2
+	ASSERT_EQ(0x0003, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BMI_NegativeIsFalse_IncreaseProgramCounter)
@@ -234,7 +245,7 @@ TEST(ProcessingUnit, BMI_NegativeIsFalse_IncreaseProgramCounter)
 
 	ASSERT_EQ(0x0002, testItem.getProgramCounter());
 }
-//
+
 TEST(ProcessingUnit, BVC_OverflowIsFalse_JumpForward)
 {
 	ProcessingUnit testItem;
@@ -244,7 +255,8 @@ TEST(ProcessingUnit, BVC_OverflowIsFalse_JumpForward)
 
 	testItem.BVC(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BVC_OverflowIsFalse_JumpBackward)
@@ -259,7 +271,8 @@ TEST(ProcessingUnit, BVC_OverflowIsFalse_JumpBackward)
 
 	testItem.BVC(0xFF); //-1
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 2 - 1 + 2
+	ASSERT_EQ(0x0003, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BVC_OverflowIsTrue_IncreaseProgramCounter)
@@ -285,7 +298,8 @@ TEST(ProcessingUnit, BVS_OverflowIsTrue_JumpForward)
 
 	testItem.BVS(0x05);
 
-	ASSERT_EQ(0x0005, testItem.getProgramCounter());
+	// 5 + 2
+	ASSERT_EQ(0x0007, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BVS_OverflowIsTrue_JumpBackward)
@@ -300,7 +314,8 @@ TEST(ProcessingUnit, BVS_OverflowIsTrue_JumpBackward)
 
 	testItem.BVS(0xFF); //-1
 
-	ASSERT_EQ(0x0001, testItem.getProgramCounter());
+	// 2 - 1 + 2
+	ASSERT_EQ(0x0003, testItem.getProgramCounter());
 }
 
 TEST(ProcessingUnit, BVS_OverflowIsFalse_IncreaseProgramCounter)
