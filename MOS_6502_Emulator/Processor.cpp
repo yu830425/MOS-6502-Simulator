@@ -99,6 +99,7 @@ void Processor::run()
 
 		if (programCounter == 0xFFF9)
 		{
+			cout << endl;
 			cout << "Emulator is terminated. return code = " << (int)m_processingUnit->getAccumulator() << endl;
 			break;
 		}

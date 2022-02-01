@@ -3,23 +3,33 @@
 
 using ::testing::Test;
 
-TEST(ProcessingUnit, ROL_0xF0RotateLeft1Bit_ReturnShouldBe0xE1)
+TEST(ProcessingUnit, ROL_0xF0RotateLeft1Bit_ReturnShouldBe0xE0)
 {
 	ProcessingUnit testItem;
+
+	auto result = testItem.ROL(0xF0);
+
+	ASSERT_EQ(0xE0, result);
+}
+
+TEST(ProcessingUnit, ROL_0xF0_WithCarry_ReturnShouldBe0xE1)
+{
+	ProcessingUnit testItem;
+	testItem.SEC();
 
 	auto result = testItem.ROL(0xF0);
 
 	ASSERT_EQ(0xE1, result);
 }
 
-TEST(ProcessingUnit, ROL_0xF0RotateLeft2Bit_ReturnShouldBe0xC3)
+TEST(ProcessingUnit, ROL_0xF0RotateLeft2Bit_ReturnShouldBe0xC1)
 {
 	ProcessingUnit testItem;
 
 	auto result = testItem.ROL(0xF0);
 	result = testItem.ROL(result);
 
-	ASSERT_EQ(0xC3, result);
+	ASSERT_EQ(0xC1, result);
 }
 
 TEST(ProcessingUnit, ROL_ResultIsNegative_SetNegativeFlag)
@@ -27,7 +37,7 @@ TEST(ProcessingUnit, ROL_ResultIsNegative_SetNegativeFlag)
 	ProcessingUnit testItem;
 
 	auto result = testItem.ROL(0xF0);
-	ASSERT_EQ(0xE1, result);
+	ASSERT_EQ(0xE0, result);
 
 	auto negative = testItem.getFlag('N');
 	ASSERT_TRUE(negative);
@@ -49,15 +59,25 @@ TEST(ProcessingUnit, ROL_Bit7Is1_SetCarryFlag)
 	ProcessingUnit testItem;
 
 	auto result = testItem.ROL(0xF0);
-	ASSERT_EQ(0xE1, result);
+	ASSERT_EQ(0xE0, result);
 
 	auto carry = testItem.getFlag('C');
 	ASSERT_TRUE(carry);
 }
 
-TEST(ProcessingUnit, ROR_0x0FRotateRight1Bit_ReturnShouldBe0x87)
+TEST(ProcessingUnit, ROR_0x0FRotateRight1Bit_ReturnShouldBe0x07)
 {
 	ProcessingUnit testItem;
+
+	auto result = testItem.ROR(0x0F);
+
+	ASSERT_EQ(0x07, result);
+}
+
+TEST(ProcessingUnit, ROR_0x0F_WithCarry_ReturnShouldBe0x87)
+{
+	ProcessingUnit testItem;
+	testItem.SEC();
 
 	auto result = testItem.ROR(0x0F);
 
@@ -67,6 +87,7 @@ TEST(ProcessingUnit, ROR_0x0FRotateRight1Bit_ReturnShouldBe0x87)
 TEST(ProcessingUnit, ROR_ResultIsNegative_SetNegativeFlag)
 {
 	ProcessingUnit testItem;
+	testItem.SEC();
 
 	auto result = testItem.ROR(0x0F);
 	ASSERT_EQ(0x87, result);
@@ -91,7 +112,7 @@ TEST(ProcessingUnit, ROR_Bit0Is1_SetCarryFlag)
 	ProcessingUnit testItem;
 
 	auto result = testItem.ROR(0x0F);
-	ASSERT_EQ(0x87, result);
+	ASSERT_EQ(0x07, result);
 
 	auto carry = testItem.getFlag('C');
 	ASSERT_TRUE(carry);
